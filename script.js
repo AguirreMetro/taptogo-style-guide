@@ -1,8 +1,9 @@
-// Simple button click interaction
+// Handle accordion interaction
 document.addEventListener("DOMContentLoaded", () => {
-  const button = document.getElementById("clickMe");
-
-  button.addEventListener("click", () => {
-    alert("Hello from JavaScript!");
+  document.querySelectorAll(".accordion-header").forEach((header) => {
+    header.addEventListener("click", () => {
+      const body = header.nextElementSibling;
+      body.style.display = body.style.display === "none" ? "block" : "none";
+    });
   });
 });

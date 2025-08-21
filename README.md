@@ -4,14 +4,14 @@ This repository provides a simple style guide inspired by the [taptogo.net](http
 
 ## Style Guide
 
-Open [`style-guide.html`](style-guide.html) to view the style guide page. It references locally stored assets in the `assets/` directory to apply TAP-like styles.
+Open [`index.html`](index.html) to view the style guide page. It references locally stored assets in the `assets/` directory to apply TAP-like styles.
 
 ## GitHub Pages
 
 The repository is ready to be published with GitHub Pages. After enabling Pages in your repository settings, visit:
 
 ```
-https://<username>.github.io/taptogo-style-guide/style-guide.html
+https://<username>.github.io/taptogo-style-guide/
 ```
 
 to view the style guide online.
