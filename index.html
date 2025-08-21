@@ -8,10 +8,28 @@
   <link rel="stylesheet" href="https://www.taptogo.net/resource/1738884380000/TapCommunity/css/app.css">
   <link rel="stylesheet" href="https://www.taptogo.net/resource/1552006553000/TAPCustomStyles">
   <style>
+    @font-face {
+      font-family: 'MuseoSans';
+      src: url('assets/fonts/MuseoSans-500-webfont.woff2') format('woff2'),
+           url('assets/fonts/MuseoSans-500-webfont.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'MuseoSlab';
+      src: url('assets/fonts/MuseoSlab-500-webfont.woff2') format('woff2'),
+           url('assets/fonts/MuseoSlab-500-webfont.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+    }
     body {
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      font-family: 'MuseoSans', Arial, sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'MuseoSlab', serif;
     }
     main {
       flex: 1;
@@ -41,6 +59,56 @@
       margin-right: 10px;
       margin-bottom: 10px;
     }
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      max-width: 400px;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 24px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    .switch input:checked + .slider {
+      background-color: #0096D6;
+    }
+    .switch input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    .switch-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
     footer {
       background: #eee;
       padding: 20px;
@@ -65,6 +133,14 @@
     border-radius: 20px;
     font-size: 1.3em;
 }
+
+    .row.valign {
+      display: flex;
+      gap: 10px;
+    }
+    .row.valign .col {
+      flex: 1;
+    }
   </style>
   
 </head>
@@ -77,7 +153,7 @@
                 <span class="icon-bar"></span>
             </button>
                 <a class="navbar-brand" href="/">
-                    <img alt="TAP" src="/resource/1738884380000/TapCommunity/img/tap-logo-transparent.png">
+                    <img alt="TAP" src="https://www.taptogo.net/resource/1738884380000/TapCommunity/img/tap-logo-transparent.png">
                 </a>
         </div>
         <div class="collapse navbar-collapse navbar-flex-tap">
@@ -246,8 +322,10 @@ Password</label><input id="j_id0:tapwrapper:loginform:login-password" type="pass
   <main>
     <section>
       <h2>Buttons</h2>
-      <button class="btn-home">Primary Button</button>
-      <button class="btn-home-alt">Alternate Button</button>
+      <div class="button-grid">
+        <button class="btn-home">Primary Button</button>
+        <button class="btn-home-alt">Alternate Button</button>
+      </div>
     </section>
 
     <section>
@@ -260,11 +338,55 @@ Password</label><input id="j_id0:tapwrapper:loginform:login-password" type="pass
     </section>
 
     <section>
-      <h2>Toggle</h2>
-      <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-      </label>
+      <h2>Input Switch</h2>
+      <div class="switch-wrapper">
+        <label class="switch" style="float:left;"><input type="checkbox"><span class="slider round"></span></label>
+        <p style="font-size:1.2em;font-weight:500;margin:0;padding:0;">Toggle option</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Input Fields</h2>
+      <div class="form-group register-name">
+        <label class="control-label" for="FirstName"><span aria-hidden="true" class="required-field">*</span>&nbsp;First Name</label>
+        <input id="FirstName" type="text" class="form-control" required tabindex="0" placeholder="First Name">
+      </div>
+    </section>
+
+    <section>
+      <h2>Tabs</h2>
+      <div class="col-xs-12 col-sm-12">
+        <ul class="nav nav-tabs" style="padding:0;">
+          <li class="active"><a data-toggle="tab" href="#tab1">Tab 1</a></li>
+          <li><a data-toggle="tab" href="#tab2">Tab 2</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade in active" id="tab1">
+            <p>Placeholder content for tab 1.</p>
+          </div>
+          <div class="tab-pane fade" id="tab2">
+            <p>Placeholder content for tab 2.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Card Panel Accordion</h2>
+      <div class="cardwebpanel panel panel-card active">
+        <div class="panel-heading" data-toggle="collapse" data-target="#card1-panel" role="tab">
+          <div class="row">
+            <div class="col-xs-12" style="padding-top:0; padding-bottom:0;">
+              <h3 class="nomargin">Sample Card <i class="fa fa-chevron-up" style="float:right;margin-right:.7em;"></i></h3>
+            </div>
+          </div>
+        </div>
+        <div id="card1-panel" class="panel-collapse collapse in" role="tabpanel">
+          <div class="panel-body">
+            <p>Placeholder card content.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section>
