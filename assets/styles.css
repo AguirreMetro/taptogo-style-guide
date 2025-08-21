@@ -5,6 +5,11 @@
   --tap-green: #3fa138;
   --tap-blue: #0096D6;
   --tap-red: #cf0000;
+  --tap-gray: #6c757d;
+  --tap-k12: #6610f2;
+  --tap-disabilities: #e83e8c;
+  --tap-college: #20c997;
+  --tap-senior: #fd7e14;
 }
 h1, h2, h3, h4, h5, h6 {
   color: var(--tap-blue);
@@ -12,4 +17,124 @@ h1, h2, h3, h4, h5, h6 {
 }
 p {
   line-height: 1.6;
+}
+
+/* Grid helpers */
+.container {
+  margin: 1rem 0;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.valign {
+  align-items: center;
+}
+.col {
+  flex: 1;
+  padding: 0.5rem;
+}
+.col-xs-12 {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .col-sm-9 {
+    width: 75%;
+  }
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 6px 12px;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.badge,
+.btn.badge {
+  border-radius: 20px;
+}
+
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.btn-primary {
+  background-color: var(--tap-orange);
+  border-color: var(--tap-orange-dark);
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: var(--tap-gray);
+  border-color: var(--tap-gray);
+  color: #fff;
+}
+
+.btn-k12students {
+  background-color: var(--tap-k12);
+  border-color: var(--tap-k12);
+  color: #fff;
+}
+
+.btn-disablilites {
+  background-color: var(--tap-disabilities);
+  border-color: var(--tap-disabilities);
+  color: #fff;
+}
+
+.btn-college {
+  background-color: var(--tap-college);
+  border-color: var(--tap-college);
+  color: #fff;
+}
+
+.btn-senior {
+  background-color: var(--tap-senior);
+  border-color: var(--tap-senior);
+  color: #fff;
+}
+
+.btn-success {
+  background-color: var(--tap-green);
+  border-color: var(--tap-green);
+  color: #fff;
+}
+
+.btn-info {
+  background-color: var(--tap-blue);
+  border-color: var(--tap-blue);
+  color: #fff;
+}
+
+.btn-warning {
+  background-color: var(--tap-orange-dark);
+  border-color: var(--tap-orange-dark);
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: var(--tap-red);
+  border-color: var(--tap-red);
+  color: #fff;
+}
+
+.btn-link {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--tap-blue);
+}
+
+.btn-link:hover {
+  text-decoration: underline;
 }
