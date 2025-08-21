@@ -1,17 +1,11 @@
 # taptogo-style-guide
 
-# taptogo.net website style guide
+This repository provides a simple style guide inspired by the [taptogo.net](https://www.taptogo.net) website. It demonstrates navigation, buttons, forms, toggles, accordions, tables, typography, and color palette approximations using TAP's brand colors.
 
-Using resources links directly from taptogo.net to ensure its always using the style, css, js files used by the site to ensure exact replication for webpage UI and UX.
+## Style Guide
 
-The goal of this project is to create one page that showcases all taptogo.net's website elements inclduing but not limited to:
-- website navigation
-- accordions
-- table
-- buttons (all states, all colors)
-- color pallete
-- headings
-- body copy
-- anchor links and styles
-- icons
-- font size and hex color information
+Open [`style-guide.html`](style-guide.html) to view the style guide page. It references locally stored assets in the `assets/` directory to apply TAP-like styles.
+
+## Notes
+
+External TAP resources were unreachable from this environment, so the included CSS and JavaScript in `assets/` are approximations based on known brand colors and component structures.
