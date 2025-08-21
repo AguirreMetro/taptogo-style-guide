@@ -1,0 +1,44 @@
+/* Reset some defaults */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #0077cc;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Main content */
+main {
+  padding: 2rem;
+  text-align: center;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+}
