@@ -323,18 +323,19 @@ Password</label><input id="j_id0:tapwrapper:loginform:login-password" type="pass
     <section>
       <h2>Buttons</h2>
       <div class="button-grid">
-        <button class="btn-home">Primary Button</button>
-        <button class="btn-home-alt">Alternate Button</button>
+        <button class="btn btn-home">Primary Button</button>
+        <button class="btn btn-home-alt">Alternate Button</button>
       </div>
     </section>
 
     <section>
       <h2>Sign In Form</h2>
-      <form>
-        <label>Email: <input type="email" placeholder="you@example.com"></label><br><br>
-        <label>Password: <input type="password" placeholder="password"></label><br><br>
-        <button class="btn-home" type="submit">Sign In</button>
-      </form>
+      <!-- input fields -->
+      <div class="form-group register-name">
+      <label class="control-label" for="FirstName">
+      </label><span aria-hidden="true" class="required-field">*</span>&nbsp;First Name</label>
+      <input id="TAPRegister:tapwrapper:registration:FirstName" type="text" name="TAPRegister:tapwrapper:registration:FirstName" class="form-control" required="required" tabindex="0" placeholder="First Name">
+      </div>
     </section>
 
     <section>
