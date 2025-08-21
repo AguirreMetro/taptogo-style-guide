@@ -1,0 +1,15 @@
+/* Additional TAP custom styles */
+:root {
+  --tap-orange: #F89721;
+  --tap-orange-dark: #DB7D07;
+  --tap-green: #3fa138;
+  --tap-blue: #0096D6;
+  --tap-red: #cf0000;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--tap-blue);
+  margin-top: 1em;
+}
+p {
+  line-height: 1.6;
+}
